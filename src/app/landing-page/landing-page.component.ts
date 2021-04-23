@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { NgModule, Component, OnInit } from '@angular/core';
 import { Song } from '../interfaces/song';
 import { SONGS } from '../mock-songs';
 import { SongComponent } from '../song/song.component'
@@ -8,8 +8,9 @@ import { SongComponent } from '../song/song.component'
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.css']
 })
-export class LandingPageComponent implements OnInit {
 
+export class LandingPageComponent implements OnInit {
+  filtersong = "";
   songs = SONGS;
 
   selectedSong?: Song;
