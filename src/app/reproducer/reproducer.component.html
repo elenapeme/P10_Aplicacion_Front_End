@@ -1,1 +1,19 @@
-<p>reproducer works!</p>
+>
+<div class="container">
+    <div class="media-footer">
+    <mat-toolbar-row>
+        <!-- {{ state?.readableCurrentTime }} -->
+        <!-- <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime" (input)="onSliderChangeEnd($event)" [disabled]="state?.error || currentFile.index === undefined"></mat-slider> -->
+        <mat-slider class="time-slider"></mat-slider>
+        <!-- {{ state?.readableDuration }} -->
+    </mat-toolbar-row>
+      <mat-toolbar-row class="media-action-bar">
+        <button mat-button>
+          <mat-icon mat-list-icon>play_circle_filled</mat-icon>
+        </button>
+        <button mat-button>
+          <mat-icon mat-list-icon>pause</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </div>
+</div>
