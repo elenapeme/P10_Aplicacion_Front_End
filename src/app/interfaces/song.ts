@@ -5,4 +5,5 @@ export interface Song {
     year: number;
     disc: string;
     style: string;
+    url: string;
   }

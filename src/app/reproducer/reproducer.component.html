@@ -1,19 +1,24 @@
->
+
 <div class="container">
     <div class="media-footer">
     <mat-toolbar-row>
-        <!-- {{ state?.readableCurrentTime }} -->
-        <!-- <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime" (input)="onSliderChangeEnd($event)" [disabled]="state?.error || currentFile.index === undefined"></mat-slider> -->
-        <mat-slider class="time-slider"></mat-slider>
-        <!-- {{ state?.readableDuration }} -->
+        <p class="">
+            p{{ durationTime }}
+        </p>
+        <!-- {{ state?.readableCurrentTime }}
+        <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime" (input)="onSliderChangeEnd($event)" [disabled]="state?.error || currentFile.index === undefined"></mat-slider>
+        {{ state?.readableDuration }} -->
     </mat-toolbar-row>
       <mat-toolbar-row class="media-action-bar">
         <button mat-button>
-          <mat-icon mat-list-icon>play_circle_filled</mat-icon>
+          <mat-icon mat-list-icon (click)="playSong(song)">play_circle_filled</mat-icon>
         </button>
         <button mat-button>
-          <mat-icon mat-list-icon>pause</mat-icon>
+          <mat-icon mat-list-icon (click)="pauseSong()">pause</mat-icon>
         </button>
+        <button mat-button>
+            <mat-icon mat-list-icon (click)="stopSong()">stop</mat-icon>
+          </button>
       </mat-toolbar-row>
     </div>
 </div>

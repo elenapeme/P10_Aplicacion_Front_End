@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { SongComponent } from './song/song.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +18,6 @@ import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
-    SongComponent,
     LandingPageComponent,
     FilterPipe,
     ReproducerComponent

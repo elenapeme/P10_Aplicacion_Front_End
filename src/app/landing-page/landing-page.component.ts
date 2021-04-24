@@ -1,7 +1,6 @@
 import { NgModule, Component, OnInit } from '@angular/core';
 import { Song } from '../interfaces/song';
 import { SONGS } from '../mock-songs';
-import { SongComponent } from '../song/song.component'
 
 @Component({
   selector: 'app-landing-page',
