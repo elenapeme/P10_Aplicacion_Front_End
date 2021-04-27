@@ -17,7 +17,7 @@
         </ul> 
     </div>
 
-    <div *ngIf="selectedSong && filtersong === ''" id="song-details">
+    <div *ngIf="selectedSong && filtersong === ''" id="song-details" class="p-2">
         <h2>Detalles de {{selectedSong.title | uppercase}}</h2>
         <div><span>Id: </span>{{selectedSong.id}}</div>
         <div><span>Title: </span>{{selectedSong.title}}</div>

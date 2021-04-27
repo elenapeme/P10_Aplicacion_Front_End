@@ -1,24 +1,23 @@
 
 <div class="container">
     <div class="media-footer">
-    <mat-toolbar-row>
-        <p class="">
-            p{{ durationTime }}
-        </p>
-        <!-- {{ state?.readableCurrentTime }}
-        <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime" (input)="onSliderChangeEnd($event)" [disabled]="state?.error || currentFile.index === undefined"></mat-slider>
-        {{ state?.readableDuration }} -->
-    </mat-toolbar-row>
-      <mat-toolbar-row class="media-action-bar">
-        <button mat-button>
-          <mat-icon mat-list-icon (click)="playSong(song)">play_circle_filled</mat-icon>
-        </button>
-        <button mat-button>
-          <mat-icon mat-list-icon (click)="pauseSong()">pause</mat-icon>
-        </button>
-        <button mat-button>
-            <mat-icon mat-list-icon (click)="stopSong()">stop</mat-icon>
-          </button>
-      </mat-toolbar-row>
+    <div *ngIf="audio?.duration">
+        <p>
+            {{ currentTime$ | async }}
+        </p>   
+    </div>
+    <div >
+        <p class="" >
+            {{ durationTime }}
+        </p>      
+    </div>
+    <div class="progress-bar bg-info" role="progressbar" [ngStyle]="{'width': (currentProgress$ | async) + '%'}" [attr.aria-valuenow]="(currentProgress$ | async) "
+              aria-valuemin="0" aria-valuemax="100">
+    </div>
+
+    <div>
+        <button class="btn btn-outline-dark" (click)="playSong(song)">Play</button>
+        <button class="btn btn-outline-dark" (click)="pauseSong()">Pause</button>
+        <button class="btn btn-outline-dark" (click)="stopSong()">Stop</button>
     </div>
 </div>
