@@ -1,0 +1,31 @@
+<h2 id="song-list-title">Lista de Canciones</h2>
+<div class="container">
+    <div class="form-group">
+        <p>Buscar canción por género:</p>
+        <input type="text" class="forms-control" placeholder="Buscar..." [(ngModel)]="filtersong" name="filtersong"/>
+    </div>
+    <div>
+    <ul id="song-list">
+        <div *ngFor="let song of songs | filter: filtersong" class="padding-bottom" (click)="onSelect(song)">
+            <span class="badge">{{song.title}}</span>
+            <p>{{song.author}}</p>
+            <div>
+                <span> Más detalles >></span>
+                <app-reproducer [song]=song></app-reproducer>
+            </div>
+        </div>
+        </ul> 
+    </div>
+
+    <div *ngIf="selectedSong && filtersong === ''" id="song-details" class="p-2">
+        <h2>Detalles de {{selectedSong.title | uppercase}}</h2>
+        <div><span>Id: </span>{{selectedSong.id}}</div>
+        <div><span>Title: </span>{{selectedSong.title}}</div>
+        <div><span>Author: </span>{{selectedSong.author}}</div>
+        <div><span>Year: </span>{{selectedSong.year}}</div>
+        <div><span>Disc: </span>{{selectedSong.disc}}</div>
+        <div><span>Style: </span>{{selectedSong.style}}</div>
+        
+    </div>
+</div>
+
