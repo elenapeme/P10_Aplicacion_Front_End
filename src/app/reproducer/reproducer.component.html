@@ -1,11 +1,16 @@
 
 <div class="container">
     <div class="media-footer">
-    <div *ngIf="audio?.duration">
+    <div *ngIf="audio?.duration; else showstart">
         <p>
             {{ currentTime$ | async }}
         </p>   
     </div>
+    <ng-template #showstart>
+        <p>
+            0:00
+        </p>   
+    </ng-template>
     <div >
         <p class="" >
             {{ durationTime }}
