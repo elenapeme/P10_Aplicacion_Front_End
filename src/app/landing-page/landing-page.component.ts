@@ -11,10 +11,12 @@ import { SONGS } from '../mock-songs';
 export class LandingPageComponent implements OnInit {
   filtersong = "";
   songs = SONGS;
+  status: boolean = false;
 
   selectedSong?: Song;
   onSelect(song: Song): void {
     this.selectedSong = song;
+    this.status = !this.status; 
   }
 
   constructor() { }
