@@ -1,0 +1,30 @@
+.padding-bottom {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+}
+
+.container {
+    display: flex;
+    place-content: center;
+}
+
+#song-list {
+    padding-right: 20px;
+}
+
+#song-details {
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 20px;
+    height: 439px;
+}
+
+#song-list-title{
+    display: flex;
+    place-content: center;
+}
+
+.badge {
+    font-weight: bold;
+}

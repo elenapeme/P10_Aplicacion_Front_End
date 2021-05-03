@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="media-footer">
+    <div *ngIf="audio?.duration; else showstart">
+        <p>
+            {{ currentTime$ | async }}
+        </p>   
+    </div>
+    <ng-template #showstart>
+        <p>
+            0:00
+        </p>   
+    </ng-template>
+    <div >
+        <p class="" >
+            {{ durationTime }}
+        </p>      
+    </div>
+    <div class="progress mb-2">
+        <div class="progress-bar bg-info" role="progressbar" [ngStyle]="{'width': (currentProgress$ | async) + '%'}" [attr.aria-valuenow]="(currentProgress$ | async) "
+                    aria-valuemin="0" aria-valuemax="100">
+            </div>
+    </div>
+    
+
+    <div>
+        <button class="btn btn btn-primary ml-2" (click)="playSong(song)">Play</button>
+        <button class="btn btn btn-primary ml-2" (click)="pauseSong()">Pause</button>
+        <button class="btn btn btn-primary ml-2" (click)="stopSong()">Stop</button>
+    </div>
+</div>
