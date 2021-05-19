@@ -1,6 +1,8 @@
 import { NgModule, Component, OnInit } from '@angular/core';
+
 import { Song } from '../interfaces/song';
 import { SONGS } from '../mock-songs';
+
 
 @Component({
   selector: 'app-landing-page',
@@ -16,7 +18,7 @@ export class LandingPageComponent implements OnInit {
   selectedSong?: Song;
   onSelect(song: Song): void {
     this.selectedSong = song;
-    this.status = !this.status; 
+    this.status = !this.status;
   }
 
   constructor() { }

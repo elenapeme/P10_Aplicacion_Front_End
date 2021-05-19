@@ -28,3 +28,7 @@
 .badge {
     font-weight: bold;
 }
+
+.mat-action-list {
+  color: black!important;
+}

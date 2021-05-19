@@ -3,18 +3,18 @@
     <input type="text" class="forms-control form-control" placeholder="Buscar..." [(ngModel)]="filtersong" name="filtersong"/>
 </div>
 <h2 id="song-list-title">Lista de Canciones</h2>
-<div class="container">    
+<div class="container">
     <div>
-    <ul id="song-list" class="list-group">
-        <div *ngFor="let song of songs | filter: filtersong" class="padding-bottom list-group-item waves-light">
-            <span class="badge">{{song.title}}</span>
-            <p>{{song.author}}</p>
-            <div (click)="onSelect(song)">
-                <span> Más detalles >></span>
-                <app-reproducer [song]=song></app-reproducer>
-            </div>
-        </div>
-        </ul> 
+        <mat-action-list class="list-group">
+          <mat-list-item *ngFor="let song of songs | filter: filtersong" class="padding-bottom list-group-item waves-light">
+              <span mat-line class="badge">{{song.title}}</span>
+              <p mat-line>{{song.author}}</p>
+              <div mat-line (click)="onSelect(song)">
+                  <span mat-line> Más detalles >></span>
+                  <app-reproducer mat-line [song]=song></app-reproducer>
+              </div>
+          </mat-list-item>
+        </mat-action-list>
     </div>
 
     <div *ngIf="selectedSong && status" id="song-details" class="p-4">
@@ -56,7 +56,7 @@
                   <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{selectedSong.style}}">
                 </div>
             </div>
-          </form>        
+          </form>
     </div>
 </div>
 
