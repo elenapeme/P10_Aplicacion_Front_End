@@ -14,10 +14,11 @@
 }
 
 #song-details {
-    border: 1px solid black;
-    border-radius: 25px;
-    padding: 20px;
-    height: 439px;
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 20px;
+  height: 439px;
+  color: white;
 }
 
 #song-list-title{
@@ -29,6 +30,28 @@
     font-weight: bold;
 }
 
-.mat-action-list {
+.mat-list-base .mat-list-item  {
   color: black!important;
 }
+
+.mat-card {
+  color: white!important;
+}
+
+h2 {
+  color: white;
+}
+
+.form-control-plaintext {
+  color: white!important;
+}
+
+.form-search {
+  min-width: 150px;
+  text-align-last: center;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 15px
+}
+

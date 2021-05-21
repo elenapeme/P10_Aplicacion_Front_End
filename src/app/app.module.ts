@@ -14,6 +14,7 @@ import { MatListModule, } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
 import { SongFinishingPipe } from './pipes/song-finishing.pipe';
 
 @NgModule({
@@ -33,7 +34,8 @@ import { SongFinishingPipe } from './pipes/song-finishing.pipe';
     MatCardModule,
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

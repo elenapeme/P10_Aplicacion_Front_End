@@ -1,7 +1,11 @@
-<div class="form-group input-group mb-3">
-    <p class="input-group-text">Buscar canción por género:</p>
-    <input type="text" class="forms-control form-control" placeholder="Buscar..." [(ngModel)]="filtersong" name="filtersong"/>
-</div>
+<form class="form-search">
+  <mat-form-field appearance="standard">
+    <mat-label>Buscar canción por género:</mat-label>
+    <input matInput type="text" [(ngModel)]="filtersong" name="filtersong"/>
+  </mat-form-field>
+</form>
+
+
 <h2 id="song-list-title">Lista de Canciones</h2>
 <div class="container">
     <div>
@@ -17,46 +21,46 @@
         </mat-action-list>
     </div>
 
-    <div *ngIf="selectedSong && status" id="song-details" class="p-4">
+    <mat-card *ngIf="selectedSong && status" id="song-details" class="p-4">
         <h2>Detalles de {{selectedSong.title | uppercase}}</h2>
         <form>
             <div class="form-group row">
-              <label for="staticEmail" class="col-sm-2 col-form-label">Id</label>
+              <label class="col-sm-2 col-form-label">Id</label>
               <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{selectedSong.id}}">
+                <input type="text" readonly class="form-control-plaintext" value="{{selectedSong.id}}">
               </div>
             </div>
             <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Title</label>
+                <label class="col-sm-2 col-form-label">Title</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{selectedSong.title}}">
+                  <input type="text" readonly class="form-control-plaintext" value="{{selectedSong.title}}">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Author</label>
+                <label class="col-sm-2 col-form-label">Author</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{selectedSong.author}}">
+                  <input type="text" readonly class="form-control-plaintext" value="{{selectedSong.author}}">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Year</label>
+                <label class="col-sm-2 col-form-label">Year</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{selectedSong.year}}">
+                  <input type="text" readonly class="form-control-plaintext" value="{{selectedSong.year}}">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Disc</label>
+                <label class="col-sm-2 col-form-label">Disc</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{selectedSong.disc}}">
+                  <input type="text" readonly class="form-control-plaintext" value="{{selectedSong.disc}}">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Style</label>
+                <label class="col-sm-2 col-form-label">Style</label>
                 <div class="col-sm-10">
-                  <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{selectedSong.style}}">
+                  <input type="text" readonly class="form-control-plaintext" value="{{selectedSong.style}}">
                 </div>
             </div>
           </form>
-    </div>
+    </mat-card>
 </div>
 
