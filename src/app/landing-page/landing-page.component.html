@@ -10,7 +10,7 @@
 <div class="container">
     <div>
         <mat-action-list class="list-group">
-          <mat-list-item *ngFor="let song of songs | filter: filtersong" class="padding-bottom list-group-item waves-light">
+          <mat-list-item *ngFor="let song of items | async | filter: filtersong"  class="padding-bottom list-group-item waves-light">
               <span mat-line class="badge">{{song.title}}</span>
               <p mat-line>{{song.author}}</p>
               <div mat-line (click)="onSelect(song)">
@@ -24,12 +24,6 @@
     <mat-card *ngIf="selectedSong && status" id="song-details" class="p-4">
         <h2>Detalles de {{selectedSong.title | uppercase}}</h2>
         <form>
-            <div class="form-group row">
-              <label class="col-sm-2 col-form-label">Id</label>
-              <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" value="{{selectedSong.id}}">
-              </div>
-            </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Title</label>
                 <div class="col-sm-10">
