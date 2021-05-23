@@ -24,37 +24,28 @@
     <mat-card *ngIf="selectedSong && status" id="song-details" class="p-4">
         <h2>Detalles de {{selectedSong.title | uppercase}}</h2>
         <form>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Title</label>
-                <div class="col-sm-10">
-                  <input type="text" readonly class="form-control-plaintext" value="{{selectedSong.title}}">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Author</label>
-                <div class="col-sm-10">
-                  <input type="text" readonly class="form-control-plaintext" value="{{selectedSong.author}}">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Year</label>
-                <div class="col-sm-10">
-                  <input type="text" readonly class="form-control-plaintext" value="{{selectedSong.year}}">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Disc</label>
-                <div class="col-sm-10">
-                  <input type="text" readonly class="form-control-plaintext" value="{{selectedSong.disc}}">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Style</label>
-                <div class="col-sm-10">
-                  <input type="text" readonly class="form-control-plaintext" value="{{selectedSong.style}}">
-                </div>
-            </div>
+            <mat-form-field class="form-group row">
+                <mat-label class="col-sm-2 col-form-label">Title</mat-label>
+                  <input type="text" matInput class="form-control-plaintext" value="{{selectedSong.title}}">
+            </mat-form-field>
+            <mat-form-field class="form-group row">
+                <mat-label class="col-sm-2 col-form-label">Author</mat-label>
+                  <input type="text" matInput class="form-control-plaintext" value="{{selectedSong.author}}">
+            </mat-form-field>
+            <mat-form-field class="form-group row">
+                <mat-label class="col-sm-2 col-form-label">Year</mat-label>
+                  <input type="text" matInput class="form-control-plaintext" value="{{selectedSong.year}}">
+            </mat-form-field>
+            <mat-form-field class="form-group row">
+                <mat-label class="col-sm-2 col-form-label">Disc</mat-label>
+                  <input type="text" matInput class="form-control-plaintext" value="{{selectedSong.disc}}">
+            </mat-form-field>
+            <mat-form-field class="form-group row">
+                <mat-label class="col-sm-2 col-form-label">Style</mat-label>
+                  <input type="text" matInput class="form-control-plaintext" value="{{selectedSong.style}}">
+            </mat-form-field>
           </form>
+          <button mat-raised-button color="accent">Save</button>
     </mat-card>
 </div>
 
