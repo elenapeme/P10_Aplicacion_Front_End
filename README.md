@@ -1,27 +1,31 @@
-# MyApp
+# Music World
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+_Aplicación web dinámica en Angular y Firebase para escuchar música _
 
-## Development server
+## Comenzando 🚀
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+_Para poder usar esta aplicación priemro deberás instalar las dependencias de angular. Simplemente con un 'npm install', se instalarán._
 
-## Code scaffolding
+Mira **Deployment** para conocer como desplegar el proyecto.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Pre-requisitos 📋
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+_Para poder hacer la instalación de manera correcta necesitareis node y la última versión de angular_
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Despliegue 📦
 
-## Running end-to-end tests
+_Para deployar en develop simplemente tenemos que escribir en la terminal 'ng serve'_
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Construido con 🛠️
 
-## Further help
+* Angular
+* Firebase
+* Angularfire
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Autores ✒️
+
+* **Elena Peris** 
+* **Elvis Bucatariu**
