@@ -2,6 +2,8 @@
 
 _Aplicación web dinámica en Angular y Firebase para escuchar música _
 
+A dynamic music web application made with Angular and Firebase.
+
 ## Comenzando 🚀
 
 _Para poder usar esta aplicación priemro deberás instalar las dependencias de angular. Simplemente con un 'npm install', se instalarán._
